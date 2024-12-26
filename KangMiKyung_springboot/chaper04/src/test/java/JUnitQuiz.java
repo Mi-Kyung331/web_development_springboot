@@ -15,7 +15,7 @@ public class JUnitQuiz {
     public void junitTest1() {
         String name1 = "홍길동";
         String name2 = "홍길동";
-        String name3 = "홍길동";
+        String name3 = "홍길금";
 
         // 모든 변수가 null이 아닌지 확인하는 코드 작성할 것
         assertThat(name1).isNotNull();
