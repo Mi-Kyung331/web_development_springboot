@@ -7,9 +7,9 @@ import java.util.Optional;
 
 @Repository
 public interface MemberRepository extends JpaRepository<Member, Long> {
-    // 이름으로 멤버를 찾는 메서드 정의 -> 이름이 없을 수도 있어서 class Optional입니다.
+
     Optional<Member> findByName(String name);
-    // 이상의 코드를 작성 후에 Test -> MemberRepositoryTest.java로 이동
+
 
 
 

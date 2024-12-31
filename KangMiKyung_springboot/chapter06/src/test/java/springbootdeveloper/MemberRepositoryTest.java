@@ -1,5 +1,7 @@
-package me.kangmikyung.springbootdeveloper;
+package springbootdeveloper;
 
+import me.kangmikyung.springbootdeveloper.Member;
+import me.kangmikyung.springbootdeveloper.MemberRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -9,14 +11,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/*
-    MemberRepositoryTest를 만들었지만, 데이터 조회를 위해서
-    입력된 데이터가 필요하기 때문에 테스트용 데이터를 추가할 예정
-    test -> resources 우클릭하고, insert-members.sql파일 생성
-    작성 후 (혹인 확인 후에) 코드 의미 :
-        src/main/resources 폴더 내에 있는 data.sql 파일을 자동 실행 못하게 하는 코드
-    이제 MemberRepositoryTest.java 파일 코드 작성
- */
+
 @DataJpaTest
 class MemberRepositoryTest {
     @Autowired
