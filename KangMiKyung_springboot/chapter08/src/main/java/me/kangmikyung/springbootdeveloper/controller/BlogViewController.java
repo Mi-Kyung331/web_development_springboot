@@ -26,7 +26,7 @@ public class BlogViewController {
 
         model.addAttribute("articles", articles);   // "articles"키에 articles list를 담았습니다.
 
-        return "articleList";   // -> 우리가 이거 다음에 만들어야될 파일의 위치 및 파일명
+        return "articleList";
     }
 
     @GetMapping("/articles/{id}")
@@ -36,15 +36,13 @@ public class BlogViewController {
 
         return "article";
     }
-    /*
-        templates -> article.html을 생성
-     */
+
     @GetMapping("/new-article")
-    // 1. id 키를 가진 쿼리 파라미터의 값을 id 변수에 매핑(id는 없을 수도 있음)
+
     public String newArticle(@RequestParam(required = false) Long id, Model model) {
-        if(id == null) {    // 2. id가 없으면 새로 생성
+        if(id == null) {
             model.addAttribute("article", new ArticleViewResponse());
-        } else {    // 3. id가 있으면 수정
+        } else {
             Article article = blogService.findById(id);
             model.addAttribute("article", new ArticleViewResponse(article));
         }
