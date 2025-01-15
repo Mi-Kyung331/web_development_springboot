@@ -12,7 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
-@Table
+@Table(name= "users")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
@@ -37,7 +37,7 @@ public class User implements UserDetails { // UserDetails를 상속 받아 인�
 
     @Override   // 권한 반환
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority("user"))
+        return List.of(new SimpleGrantedAuthority("user"));
     }
 
     // 사용자의 id를 반환(고유한 값)

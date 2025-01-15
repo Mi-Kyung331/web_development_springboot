@@ -47,7 +47,7 @@ public class WebSecurityConfig {
                         .anyRequest().authenticated())
                 .formLogin(formLogin -> formLogin       // 4. 폼 기반 로그인 설정
                         .loginPage("/login")
-                        .defaultSuccessUrl("articles")
+                        .defaultSuccessUrl("/articles")
                 )
                 .logout(logout -> logout                  // 5. 로그아웃 설정
                         .logoutSuccessUrl("/login")
